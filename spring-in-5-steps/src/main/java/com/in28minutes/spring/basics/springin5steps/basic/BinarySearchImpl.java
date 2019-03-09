@@ -7,30 +7,19 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class BinarySearchImpl {
-	
+
 	@Autowired
-	//@Qualifier("quick")
+	@Qualifier("bubble")
 	private SortAlgorithm sortAlgorithm;
-
-//	public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
-//		super();
-//		this.sortAlgorithm = sortAlgorithm;
 	
-	
-//	public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
-//		this.sortAlgorithm = sortAlgorithm;
-	
-	
-
-	
-
 	public int binarySearch(int[] numbers, int numberToSearchFor) {
-		
+
 		int[] sortedNumbers = sortAlgorithm.sort(numbers);
 		System.out.println(sortAlgorithm);
+		// Search the array
 		return 3;
-		
 	}
+
 }
