@@ -6,10 +6,12 @@ import javax.inject.Named;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Named
+//@Named
+@Component
 public class SomeCdiBusiness {
 	
 	@Inject
+//	@Autowired
 	SomeCdiDao someCdiDao;
 
 	public SomeCdiDao getSomeCdiDao() {
