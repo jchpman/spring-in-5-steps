@@ -8,6 +8,7 @@ public class MyMath {
 			sum += i;
 		}
 		return sum;
+		
 	}
 
 }
